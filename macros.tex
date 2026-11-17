@@ -4,7 +4,7 @@
 \newcommand{\vparen}[1]{\left|#1\right|}
 \newcommand{\vector}[1]{\left\langle#1\right\rangle}
 \newcommand{\symenv}[1]{\begin{align}#1\end{align}}
-\newcommand{\symrow}[2]{\text{}&&&& {#1} &= {#2} &&&&&&\text{} \\ }
-\newcommand{\symleft}[3][]{\text{#1}&&&& {#2} &= {#3} &&&&&&\text{} \\ }
-\newcommand{\symright}[3][]{\text{}&&&& {#2} &= {#3} &&&&&&\text{#1} \\ }
-\newcommand{\symwich}[4][]{\text{#1}&&&& {#2} &= {#3} &&&&&&\text{#4} \\ }
+\newcommand{\symwich}[5][=]{\text{#2}&&&& {#3} &\mathrel{#1} {#4} &&&&&&\text{#5} \\ }
+\newcommand{\symrow}[3][=]{\symwich[#1]{}{#2}{#3}{}}
+\newcommand{\symleft}[4][=]{\symwich[#1]{#2}{#3}{#4}{}}
+\newcommand{\symright}[4][=]{\symwich[#1]{}{#3}{#4}{#2}}
